@@ -21,12 +21,14 @@ from django.views.static import serve
 
 
 from ItemsForSale.views import (
-index
+index,
+shoes,
 )
 
 urlpatterns = [
     path('admin-panel/', admin.site.urls),
     path('', index),
+    path('shoes/', shoes),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

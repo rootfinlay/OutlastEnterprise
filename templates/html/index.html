@@ -21,41 +21,10 @@
     0% {color: white;}
     100% {color: black;}
   }
-  .shoename {
-    font-family: 'Tomorrow', sans-serif;
-    color: black;
-    font-size: 40px;
-    text-align: center;
-    padding-left: 10px;
-    padding-top: 45px;
-    padding-bottom: 45px;
-  }
-  .shoepicture {
-    height: 500px;
-    width: 640px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .shoedescription {
-    font-style: italic;
-    font-size: 15px;
-    font-family: sans-serif;
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 150px;
-  }
   </style>
   <body>
     <h1 class='title'>Outlast Enterprise</h1>
-    <hr>
     {% block content %}
-    {% for shoe in all_shoes %}
-      <h3 class='shoename'>{{shoe.shoe_condition}} {{shoe.shoe_brand}} {{shoe.shoe_type}}<h3>
-      <img class='shoepicture' src='{{shoe.shoe_picture.url}}'>
-      <p class='shoedescription'>{{shoe.shoe_description}}</p>
-    {% endfor %}
     {% endblock %}
-    </table>
   </body>
 </html>

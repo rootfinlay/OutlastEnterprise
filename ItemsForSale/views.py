@@ -5,6 +5,11 @@ from .models import *
 def index(request, *args, **kwargs):
     target_page = './html/index.html'
 
+    return render(request, target_page)
+
+def shoes(request, *args, **kwargs):
+    target_page = './html/shoes.html'
+
     all_shoes = Shoes.objects.all()
     all_accessories = Accessories.objects.all()
     all_clothes = Clothing.objects.all()
